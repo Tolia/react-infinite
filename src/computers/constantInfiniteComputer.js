@@ -8,15 +8,15 @@ class ConstantInfiniteComputer extends InfiniteComputer {
   }
 
   getDisplayIndexStart(windowTop: number): number {
-    return Math.floor(windowTop / this.heightData);
+    var nonZeroIndex = Math.floor(windowTop / this.heightData);
+    if (nonZeroIndex > 0) {
+      return nonZeroIndex + 1;
+    }
+    return nonZeroIndex;
   }
 
   getDisplayIndexEnd(windowBottom: number): number {
-    var nonZeroIndex = Math.ceil(windowBottom / this.heightData);
-    if (nonZeroIndex > 0) {
-      return nonZeroIndex - 1;
-    }
-    return nonZeroIndex;
+    return Math.ceil(windowBottom / this.heightData);
   }
 
   getTopSpacerHeight(displayIndexStart: number): number {
