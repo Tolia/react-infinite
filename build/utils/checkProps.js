@@ -14,7 +14,7 @@ module.exports = function (props) {
   }
 
   if (!(_isFinite(props.elementHeight) || Array.isArray(props.elementHeight))) {
-    throw new Error(rie + 'You must provide either a number or an array of numbers as the elementHeight.');
+    throw new Error(rie + 'You must provide either a number or an array of numbers as the elementHeight. props.elementHeight == ' + props.elementHeight);
   }
 
   if (Array.isArray(props.elementHeight)) {

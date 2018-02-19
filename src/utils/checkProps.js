@@ -19,7 +19,8 @@ module.exports = function(props: ReactInfiniteProps) {
   if (!(_isFinite(props.elementHeight) || Array.isArray(props.elementHeight))) {
     throw new Error(
       rie +
-        'You must provide either a number or an array of numbers as the elementHeight.'
+        'You must provide either a number or an array of numbers as the elementHeight. props.elementHeight == ' +
+        props.elementHeight
     );
   }
 
