@@ -23,13 +23,4 @@ module.exports = function(props: ReactInfiniteProps) {
         props.elementHeight
     );
   }
-
-  if (Array.isArray(props.elementHeight)) {
-    if (React.Children.count(props.children) !== props.elementHeight.length) {
-      throw new Error(
-        rie +
-          'There must be as many values provided in the elementHeight prop as there are children.'
-      );
-    }
-  }
 };
